@@ -26,6 +26,13 @@
 uint8 g_time[TIME_ARR_LENGTH] = {0};
 
 void main(void){
+    /* External Interrupt 0 Settings */
+    /*
+     * This will enable external interrupt 0 to work on falling edge with internal pull
+     * resistor ON 
+     */
+    EX_INT_enable(EXTERNAL_INTERRUPT_0_ID, EXT_INT_FALLING_EDGE_TRIGGER_INTERNAL_PULL_UP);
+    
     /* Timer Settings */
     /*
      * By setting the config structure with these settings the timer1 will work on
