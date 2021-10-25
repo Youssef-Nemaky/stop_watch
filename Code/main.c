@@ -27,11 +27,22 @@ uint8 g_time[TIME_ARR_LENGTH] = {0};
 
 void main(void){
     /* Timer Settings */
+    /*
+     * By setting the config structure with these settings the timer1 will work on
+     * 1) CTC(compare) mode
+     * 2) Pre-scaler of 64
+     * 3) initialValue of 0
+     * 4) compareValue of 15625 (1 second)
+     * 5) OC1A and OC1B both disconnected
+     * 6) number of ticks is 1 as we want to fire an interrupt every 1 second
+     */
     timer1_config_t timer1 = {TIMER_CTC_MODE, T1_F_CPU_64, INITIAL_VALUE_TIMER1, 
     COMPARE_VALUE_TIMER1, LOW, OC1_DISCONNECTED, OC1_DISCONNECTED, 1, LOW};
     
+    /* Set TIMER1 callback function */
     TIMER1_setCallBack(increaseTime);
     
+    /* Initialize the timer with the configurational structure */
     /* SUPER LOOP */
     while(1){
 
