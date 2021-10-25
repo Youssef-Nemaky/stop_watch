@@ -43,6 +43,8 @@ void main(void){
     TIMER1_setCallBack(increaseTime);
     
     /* Initialize the timer with the configurational structure */
+    TIMER1_init(&timer1);
+
     /* SUPER LOOP */
     while(1){
 
