@@ -8,4 +8,12 @@
 
 #include "stop_watch.h"
 
+void main(void){
+    
+    /* SUPER LOOP */
+    while(1){
+
+    }
+}
+
 
