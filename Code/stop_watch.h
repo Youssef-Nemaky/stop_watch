@@ -22,4 +22,13 @@
 #include "MCAL/Gpio_Driver/gpio.h"
 #include "external_interrupt.h"
 
+/*
+==============================================================================
+*                               Definitions
+==============================================================================
+*/
+
+#define INITIAL_VALUE_TIMER1 (0u)
+#define COMPARE_VALUE_TIMER1 (15625u)
+
 #endif /* STOP_WATCH_H_ */
