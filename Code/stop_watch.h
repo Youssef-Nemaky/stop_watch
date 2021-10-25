@@ -22,6 +22,14 @@
 #include "MCAL/Gpio_Driver/gpio.h"
 #include "external_interrupt.h"
 
+
+/*
+==============================================================================
+*                               External Variables
+==============================================================================
+*/
+extern uint8 g_time[TIME_ARR_LENGTH];
+
 /*
 ==============================================================================
 *                               Definitions
@@ -30,7 +38,12 @@
 
 #define INITIAL_VALUE_TIMER1 (0u)
 #define COMPARE_VALUE_TIMER1 (15625u)
-
+#define TIME_ARR_LENGTH 3
+#define TIME_SECONDS_INDEX 0
+#define TIME_MINUTES_INDEX 1
+#define TIME_HOURS_INDEX 2
+#define MAX_SECONDS_COUNTER 60
+#define MAX_MINUTES_COUNTER 60
 /*
 ==============================================================================
 *                            Functions Prototypes
