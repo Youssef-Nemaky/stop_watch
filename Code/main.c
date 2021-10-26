@@ -56,6 +56,15 @@ void main(void){
     GPIO_INTERNAL_PULLUP_ENABLED};
 
     BUTTON_init(button0);
+    
+    /* Button 1
+     * This button is connected to INT1 pin which will trigger the external interrupt 1
+     */
+
+    button_config_t button1 = {PORTD_ID, PIN3_ID, BUTTON_PULLDOWN_CONNECTION,
+    GPIO_INTERNAL_RESISTOR_DISABLED};
+
+    BUTTON_init(button1);
 
     /* Timer Settings */
     /*
