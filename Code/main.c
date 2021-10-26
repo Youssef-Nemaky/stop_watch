@@ -40,7 +40,14 @@ void main(void){
      * resistor OFF 
      */
     EX_INT_enable(EXTERNAL_INTERRUPT_1_ID, EXT_INT_RISING_EDGE_TRIGGER);
-      
+    
+    /* External Interrupt 2
+     * This will enable external interrupt 2 to work on rising edge with internal pull
+     * resistor OFF 
+     */
+    EX_INT_enable(EXTERNAL_INTERRUPT_2_ID, EXT_INT_FALLING_EDGE_TRIGGER_INTERNAL_PULL_UP);
+    
+    
     /* Button 0 
      * This button is connected to INT0 pin which will trigger the external interrupt 0
      */
