@@ -55,7 +55,7 @@ void main(void){
     button_config_t button0 = {PORTD_ID, PIN2_ID, BUTTON_PULLUP_CONNECTION,
     GPIO_INTERNAL_PULLUP_ENABLED};
 
-    BUTTON_init(button0);
+    BUTTON_init(&button0);
     
     /* Button 1
      * This button is connected to INT1 pin which will trigger the external interrupt 1
@@ -64,7 +64,7 @@ void main(void){
     button_config_t button1 = {PORTD_ID, PIN3_ID, BUTTON_PULLDOWN_CONNECTION,
     GPIO_INTERNAL_RESISTOR_DISABLED};
 
-    BUTTON_init(button1);
+    BUTTON_init(&button1);
 
     /* Button 2 
      * This button is connected to INT2 pin which will trigger the external interrupt 2
@@ -73,8 +73,8 @@ void main(void){
     button_config_t button2 = {PORTB_ID, PIN2_ID, BUTTON_PULLUP_CONNECTION,
     GPIO_INTERNAL_PULLUP_ENABLED};
 
-    BUTTON_init(button2);
-    
+    BUTTON_init(&button2);
+
 
 
     /* Timer Settings */
