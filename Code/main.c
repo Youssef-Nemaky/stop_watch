@@ -66,6 +66,17 @@ void main(void){
 
     BUTTON_init(button1);
 
+    /* Button 2 
+     * This button is connected to INT2 pin which will trigger the external interrupt 2
+     */
+
+    button_config_t button2 = {PORTB_ID, PIN2_ID, BUTTON_PULLUP_CONNECTION,
+    GPIO_INTERNAL_PULLUP_ENABLED};
+
+    BUTTON_init(button2);
+    
+
+
     /* Timer Settings */
     /*
      * By setting the config structure with these settings the timer1 will work on
