@@ -46,13 +46,13 @@ void main(void){
      * resistor OFF 
      */
     EX_INT_enable(EXTERNAL_INTERRUPT_2_ID, EXT_INT_FALLING_EDGE_TRIGGER_INTERNAL_PULL_UP);
-    
+
     
     /* Button 0 
      * This button is connected to INT0 pin which will trigger the external interrupt 0
      */
 
-    button_config_t button0 = {PORTD_ID, PIN2_ID, BUTTON_PULLDOWN_CONNECTION,
+    button_config_t button0 = {PORTD_ID, PIN2_ID, BUTTON_PULLUP_CONNECTION,
     GPIO_INTERNAL_PULLUP_ENABLED};
 
     BUTTON_init(button0);
