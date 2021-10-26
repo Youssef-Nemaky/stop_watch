@@ -26,13 +26,21 @@
 uint8 g_time[TIME_ARR_LENGTH] = {0};
 
 void main(void){
-    /* External Interrupt 0 Settings */
-    /*
+    /* External Interrupts Settings */
+   
+    /* External Interrupt 0
      * This will enable external interrupt 0 to work on falling edge with internal pull
      * resistor ON 
      */
     EX_INT_enable(EXTERNAL_INTERRUPT_0_ID, EXT_INT_FALLING_EDGE_TRIGGER_INTERNAL_PULL_UP);
     
+   
+    /* External Interrupt 1
+     * This will enable external interrupt 1 to work on rising edge with internal pull
+     * resistor OFF 
+     */
+    EX_INT_enable(EXTERNAL_INTERRUPT_1_ID, EXT_INT_RISING_EDGE_TRIGGER);
+      
     /* Button 0 
      * This button is connected to INT0 pin which will trigger the external interrupt 0
      */
