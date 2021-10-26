@@ -75,7 +75,9 @@ void main(void){
 
     BUTTON_init(&button2);
 
+    SEVENSEGMENT_config_t seven_segment_display = {PORTA_ID, GPIO_FIRST_HALF};
 
+    SEVENSEGMENT_init(&seven_segment_display);
 
     /* Timer Settings */
     /*
