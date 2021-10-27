@@ -20,7 +20,7 @@
 #include "../Important_Header_Files/common_macros.h"
 #include "../Important_Header_Files/std_types.h"
 #include "../Gpio_Driver/gpio.h"
-
+#include <assert.h>
 /*
 ==============================================================================
 *                                   Definitions
