@@ -30,7 +30,7 @@ void main(void){
 
     /* Enable Global Interrupts */
     SREG |= (1<<7);
-    
+
     /* Set the control pins of the 7-segment */
     for(seven_seg_ctrl_pins_counter = 0; seven_seg_ctrl_pins_counter < SEVEN_SEG_CONTROL_PINS;
     seven_seg_ctrl_pins_counter++){
@@ -44,12 +44,16 @@ void main(void){
      */
     EX_INT_enable(EXTERNAL_INTERRUPT_0_ID, EXT_INT_FALLING_EDGE_TRIGGER_INTERNAL_PULL_UP);
     
+    EX_INT_setCallBack(resetTime, EXTERNAL_INTERRUPT_0_ID);
+
    
     /* External Interrupt 1
      * This will enable external interrupt 1 to work on rising edge with internal pull
      * resistor OFF 
      */
     EX_INT_enable(EXTERNAL_INTERRUPT_1_ID, EXT_INT_RISING_EDGE_TRIGGER);
+
+    EX_INT_setCallBack(pauseTime, EXTERNAL_INTERRUPT_1_ID);
     
     /* External Interrupt 2
      * This will enable external interrupt 2 to work on rising edge with internal pull
@@ -57,7 +61,8 @@ void main(void){
      */
     EX_INT_enable(EXTERNAL_INTERRUPT_2_ID, EXT_INT_FALLING_EDGE_TRIGGER_INTERNAL_PULL_UP);
 
-    
+    //EX_INT_setCallBack(resumeTime, EXTERNAL_INTERRUPT_2_ID);
+
     /* Button 0 
      * This button is connected to INT0 pin which will trigger the external interrupt 0
      */
