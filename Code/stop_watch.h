@@ -60,5 +60,9 @@ extern uint8 g_time[TIME_ARR_LENGTH];
  */
 void increaseTime(void);
 
+/* 
+ * This function gets called to display the time on the seven segments display
+ */
+void displayTime(const SEVENSEGMENT_config_t * seven_segment_configPtr);
 
 #endif /* STOP_WATCH_H_ */
