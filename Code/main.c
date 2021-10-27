@@ -27,6 +27,10 @@ uint8 g_time[TIME_ARR_LENGTH] = {0};
 
 void main(void){
     uint8 seven_seg_ctrl_pins_counter = 0;
+
+    /* Enable Global Interrupts */
+    SREG |= (1<<7);
+    
     /* Set the control pins of the 7-segment */
     for(seven_seg_ctrl_pins_counter = 0; seven_seg_ctrl_pins_counter < SEVEN_SEG_CONTROL_PINS;
     seven_seg_ctrl_pins_counter++){
