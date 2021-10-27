@@ -44,6 +44,8 @@ extern uint8 g_time[TIME_ARR_LENGTH];
 #define TIME_HOURS_INDEX 2
 #define MAX_SECONDS_COUNTER 60
 #define MAX_MINUTES_COUNTER 60
+#define SEVEN_SEG_CONTROL_PINS 6
+#define SEVEN_SEG_CONTROL_PORT PORTC_ID
 /*
 ==============================================================================
 *                            Functions Prototypes
