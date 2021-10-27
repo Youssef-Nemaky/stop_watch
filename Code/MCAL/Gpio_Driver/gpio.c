@@ -82,6 +82,7 @@ void GPIO_setPinDirection(GPIO_port_number_t portNumber, GPIO_pin_number_t pinNu
                 break;
             }
             break;
+        }
     }
 }
 
@@ -435,7 +436,7 @@ void GPIO_writeHalfPort(GPIO_port_number_t portNumber, uint8 portValue, GPIO_hal
  * if the port number is not correct, the function will return 0
  */
 uint8 GPIO_readHalfPort(GPIO_port_number_t portNumber, GPIO_half_port_number_t portHalf){
-    if(portNumber >= PORT_NUMS) || (portHalf >= HALFS_PER_PORT)){
+    if((portNumber >= PORT_NUMS) || (portHalf >= HALFS_PER_PORT)){
         return LOW;
     } else {
         switch (portNumber)
