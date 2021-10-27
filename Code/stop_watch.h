@@ -75,4 +75,9 @@ void resetTime(void);
  */
 void pauseTime(void);
 
+/* 
+ * This function gets called to resume the timer
+ */
+void resumeTime(void);
+
 #endif /* STOP_WATCH_H_ */
