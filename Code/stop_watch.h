@@ -22,14 +22,6 @@
 #include "MCAL/Gpio_Driver/gpio.h"
 #include "MCAL/External_Interrupt_Driver/external_interrupt.h"
 
-
-/*
-==============================================================================
-*                               External Variables
-==============================================================================
-*/
-extern uint8 g_time[TIME_ARR_LENGTH];
-
 /*
 ==============================================================================
 *                               Definitions
@@ -46,6 +38,14 @@ extern uint8 g_time[TIME_ARR_LENGTH];
 #define MAX_MINUTES_COUNTER 60
 #define SEVEN_SEG_CONTROL_PINS 6
 #define SEVEN_SEG_CONTROL_PORT PORTC_ID
+
+/*
+==============================================================================
+*                               External Variables
+==============================================================================
+*/
+extern uint8 g_time[TIME_ARR_LENGTH];
+
 /*
 ==============================================================================
 *                            Functions Prototypes
