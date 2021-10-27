@@ -86,6 +86,8 @@ dkms.conf
 
 ### Eclipse ###
 .metadata
+Debug/
+!Debug/*.elf
 bin/
 tmp/
 *.tmp
