@@ -70,4 +70,9 @@ void displayTime(const SEVENSEGMENT_config_t * seven_segment_configPtr);
  */
 void resetTime(void);
 
+/* 
+ * This function gets called to pause the timer
+ */
+void pauseTime(void);
+
 #endif /* STOP_WATCH_H_ */
