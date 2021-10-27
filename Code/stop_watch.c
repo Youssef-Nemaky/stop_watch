@@ -8,6 +8,12 @@
 
 #include "stop_watch.h"
 
+/*
+==============================================================================
+*                            Static Functions Prototypes
+==============================================================================
+*/
+static void disableDisplays();
 
 /* This function gets called to increase the time 
  * It increases the seconds and if overflow occurs (second reaches 60), seconds 
@@ -24,5 +30,26 @@ void increaseTime(void){
             g_time[TIME_MINUTES_INDEX] = LOW;
             g_time[TIME_HOURS_INDEX]++;
         }
+    }
+}
+
+
+/* 
+ * This function gets called to display the time on the seven segments display
+ */
+void displayTime(const SEVENSEGMENT_config_t * seven_segment_configPtr){
+    uint8 seven_seg_ctrl_counter = 0;
+    for(seven_seg_ctrl_counter = 0; seven_seg_ctrl_counter < SEVEN_SEG_CONTROL_PINS; seven_seg_ctrl_counter++){
+        disableDisplays();
+        GPIO_writePin(SEVEN_SEG_CONTROL_PORT, seven_seg_ctrl_counter, HIGH);
+        SEVENSEGMENT_displayNumber(seven_segment_configPtr, g_time[seven_seg_ctrl_counter/2]);
+        _delay_ms(3);
+    }
+}
+
+static void disableDisplays(){
+    uint8 counter;
+    for(counter = 0; counter < SEVEN_SEG_CONTROL_PINS; counter++){
+        GPIO_writePin(SEVEN_SEG_CONTROL_PORT, counter, LOW);
     }
 }
