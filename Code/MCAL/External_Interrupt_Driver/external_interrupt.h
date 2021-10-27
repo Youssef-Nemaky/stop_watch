@@ -62,5 +62,5 @@ void EX_INT_enable(external_interrupt_number_t externalInterruptNumber, external
 void EX_INT_disable(external_interrupt_number_t externalInterruptNumber);
 
 /* Set the call back function that will be called when the interrupt is handled */
-void EX_INT_setCallBack(void (*callBackPtr)(void), uint8 ex_interrupt_num);
+void EX_INT_setCallBack(void (*callBackPtr)(void), external_interrupt_number_t ex_interrupt_num);
 #endif /* EXTERNAL_INTERRUPT_H_ */

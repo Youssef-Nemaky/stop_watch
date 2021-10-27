@@ -125,7 +125,7 @@ void EX_INT_disable(external_interrupt_number_t externalInterruptNumber){
     }
 }
 
-void EX_INT_setCallBack(void (*callBackPtr)(void), uint8 ex_interrupt_num){
+void EX_INT_setCallBack(void (*callBackPtr)(void), external_interrupt_number_t ex_interrupt_num){
     if(ex_interrupt_num >= EXTERNAL_INTERRUPTS_NUMS){
         /* Some sort of error handling */
         /* Do Nothing! */
