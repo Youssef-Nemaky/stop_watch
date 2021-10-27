@@ -51,6 +51,16 @@ void displayTime(const SEVENSEGMENT_config_t * seven_segment_configPtr){
     }
 }
 
+/* 
+ * This function gets called to reset the time array
+ */
+void resetTime(void){
+    uint8 counter;
+    for(counter = 0; counter < TIME_ARR_LENGTH; counter++){
+        g_time[counter] = 0;
+    }
+}
+
 static void disableDisplays(){
     uint8 counter;
     for(counter = 0; counter < SEVEN_SEG_CONTROL_PINS; counter++){
