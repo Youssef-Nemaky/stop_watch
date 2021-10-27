@@ -65,4 +65,9 @@ void increaseTime(void);
  */
 void displayTime(const SEVENSEGMENT_config_t * seven_segment_configPtr);
 
+/* 
+ * This function gets called to reset the time array
+ */
+void resetTime(void);
+
 #endif /* STOP_WATCH_H_ */
