@@ -224,7 +224,8 @@ void resetTime(void){
         g_time[counter] = 0;
     }
     TIMER1_deInit();
-    TIMER1_start(&timer1);
+    TIMER1_init(&timer1);
+    TIMER1_stop();
 }
 
 /* 
