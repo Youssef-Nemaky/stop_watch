@@ -26,6 +26,12 @@
 uint8 g_time[TIME_ARR_LENGTH] = {0};
 
 void main(void){
+    uint8 seven_seg_ctrl_pins_counter = 0;
+    /* Set the control pins of the 7-segment */
+    for(seven_seg_ctrl_pins_counter = 0; seven_seg_ctrl_pins_counter < SEVEN_SEG_CONTROL_PINS;
+    seven_seg_ctrl_pins_counter++){
+        GPIO_setPinDirection(SEVEN_SEG_CONTROL_PORT,seven_seg_ctrl_pins_counter,PIN_OUTPUT);
+    }
     /* External Interrupts Settings */
    
     /* External Interrupt 0
