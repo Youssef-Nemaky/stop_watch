@@ -167,7 +167,7 @@ void GPIO_setPortDirection(GPIO_port_number_t portNumber,GPIO_port_mode_t portMo
         /* There should be some sort of error handling */
         /* Do Nothing */
     } else {
-        switch (porNumber){
+        switch (portNumber){
         case PORTA_ID:
             switch (portMode){
             case PORT_OUTPUT:
