@@ -42,7 +42,11 @@ void displayTime(const SEVENSEGMENT_config_t * seven_segment_configPtr){
     for(seven_seg_ctrl_counter = 0; seven_seg_ctrl_counter < SEVEN_SEG_CONTROL_PINS; seven_seg_ctrl_counter++){
         disableDisplays();
         GPIO_writePin(SEVEN_SEG_CONTROL_PORT, seven_seg_ctrl_counter, HIGH);
-        SEVENSEGMENT_displayNumber(seven_segment_configPtr, g_time[seven_seg_ctrl_counter/2]);
+        if(seven_seg_ctrl_counter % 2 == 0){
+            SEVENSEGMENT_displayNumber(seven_segment_configPtr, g_time[(seven_seg_ctrl_counter / 2)] % 10);
+        } else {
+            SEVENSEGMENT_displayNumber(seven_segment_configPtr, g_time[(seven_seg_ctrl_counter / 2)] / 10);
+        }
         _delay_ms(3);
     }
 }
