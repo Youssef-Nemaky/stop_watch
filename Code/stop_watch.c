@@ -67,6 +67,15 @@ void resetTime(void){
 void pauseTime(void){
     TIMER1_stop();
 }
+
+/* 
+ * This function gets called to resume the timer
+ */
+void resumeTime(void){
+    TIMER1_start();
+}
+
+
 static void disableDisplays(){
     uint8 counter;
     for(counter = 0; counter < SEVEN_SEG_CONTROL_PINS; counter++){
