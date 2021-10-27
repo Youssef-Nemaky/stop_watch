@@ -15,12 +15,12 @@
 ==============================================================================
 */
 /* HAL Drivers */
-#include "button.h"
-#include "seven_segment.h"
+#include "HAL/Button_Driver/button.h"
+#include "HAL/Seven_Segment_Driver/seven_segment.h"
 /* MCAL Drivers */
-#include "timer.h"
+#include "MCAL/Timer_Driver/timer.h"
 #include "MCAL/Gpio_Driver/gpio.h"
-#include "external_interrupt.h"
+#include "MCAL/External_Interrupt_Driver/external_interrupt.h"
 
 
 /*
