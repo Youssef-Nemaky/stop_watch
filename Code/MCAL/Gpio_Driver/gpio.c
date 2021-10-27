@@ -30,12 +30,13 @@ void GPIO_setPinDirection(GPIO_port_number_t portNumber, GPIO_pin_number_t pinNu
             switch (pinMode)
             {
             case PIN_OUTPUT:
-                CLEAR_BIT(DDRA, pinNumber);
-                break;
-            case PIN_INPUT:
                 SET_BIT(DDRA, pinNumber);
                 break;
+            case PIN_INPUT:
+                CLEAR_BIT(DDRA, pinNumber);
+                break;
             case PIN_INPUT_INTERNAL_PULLUP:
+                CLEAR_BIT(DDRA, pinNumber);
                 SET_BIT(PORTA, pinNumber);
                 break;
             }
@@ -44,12 +45,13 @@ void GPIO_setPinDirection(GPIO_port_number_t portNumber, GPIO_pin_number_t pinNu
             switch (pinMode)
             {
             case PIN_OUTPUT:
-                CLEAR_BIT(DDRB, pinNumber);
-                break;
-            case PIN_INPUT:
                 SET_BIT(DDRB, pinNumber);
                 break;
+            case PIN_INPUT:
+                CLEAR_BIT(DDRB, pinNumber);
+                break;
             case PIN_INPUT_INTERNAL_PULLUP:
+                CLEAR_BIT(DDRB, pinNumber);
                 SET_BIT(PORTB, pinNumber);
                 break;
             }
@@ -58,12 +60,13 @@ void GPIO_setPinDirection(GPIO_port_number_t portNumber, GPIO_pin_number_t pinNu
             switch (pinMode)
             {
             case PIN_OUTPUT:
-                CLEAR_BIT(DDRC, pinNumber);
-                break;
-            case PIN_INPUT:
                 SET_BIT(DDRC, pinNumber);
                 break;
+            case PIN_INPUT:
+                CLEAR_BIT(DDRC, pinNumber);
+                break;
             case PIN_INPUT_INTERNAL_PULLUP:
+                CLEAR_BIT(DDRC, pinNumber);
                 SET_BIT(PORTC, pinNumber);
                 break;
             }
@@ -72,12 +75,13 @@ void GPIO_setPinDirection(GPIO_port_number_t portNumber, GPIO_pin_number_t pinNu
             switch (pinMode)
             {
             case PIN_OUTPUT:
-                CLEAR_BIT(DDRD, pinNumber);
-                break;
-            case PIN_INPUT:
                 SET_BIT(DDRD, pinNumber);
                 break;
+            case PIN_INPUT:
+                CLEAR_BIT(DDRD, pinNumber);
+                break;
             case PIN_INPUT_INTERNAL_PULLUP:
+                CLEAR_BIT(DDRD, pinNumber);
                 SET_BIT(PORTD, pinNumber);
                 break;
             }
