@@ -106,6 +106,6 @@ void main(void){
 
     /* SUPER LOOP */
     while(1){
-        displayTime();
+        displayTime(&time_display);
     }
 }
