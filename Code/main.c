@@ -193,6 +193,9 @@ void increaseTime(void){
         if(g_time[TIME_MINUTES_INDEX] >= MAX_MINUTES_COUNTER){
             g_time[TIME_MINUTES_INDEX] = LOW;
             g_time[TIME_HOURS_INDEX]++;
+            if(g_time[TIME_HOURS_INDEX] > 99){
+                g_time[TIME_HOURS_INDEX] = 0;
+            }
         }
     }
 }
